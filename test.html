@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            fetch('http://localhost:8080/api/v1/signin', 
+            {
+                method: 'POST',
+                body: JSON.stringify({
+                    "usernameOrEmail":"wambui",
+                    "password":"wambui"
+                }),
+                headers: {
+                    'content-type':'application/json'
+                }
+            }
+            ).then(resp => resp.json())
+            .then(data => console.log(data));
+        </script>
+    </body>
+</html>
